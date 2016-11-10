@@ -1,0 +1,16 @@
+void storeError(int utilsErrType, int utilsErrno, char errMsg[]);
+int getError(int *utilsErrType, int *utilsErrno, char errMsg[], int sizeErrMsg);
+int hostname_to_ip(char *hostname, char *ip);
+void getTime(char [], int);
+void utilsErr(int utilsErrno);
+time_t getLocalTime();
+time_t convertTimeFromSQL(char passedDateTime[]);
+void convertTimeToSQL(time_t passedDateTime, char dateTimeRet[], int lenDateTimeRet);
+void convertToString(int passedValue, char retString[], size_t siz);
+int convertToInteger(char passedString[]);
+time_t maxTime(time_t arg1, time_t arg2);
+size_t cps(char *dst, const char *src, size_t siz);
+size_t cat(char *dst, const char *src, size_t siz);
+size_t strlcpy(char *dst, const char *src, size_t siz);
+size_t strlcat(char *dst, const char *src, size_t siz);
+enum errType_e {Success, Utility, Rockbus, Modbus, mySql, Zen};
